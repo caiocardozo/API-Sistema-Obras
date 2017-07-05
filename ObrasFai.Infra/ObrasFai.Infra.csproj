@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC82030A-E6AB-4DD0-B3FF-0B92663CF92D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObrasFai.Infra</RootNamespace>
+    <AssemblyName>ObrasFai.Infra</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.1.2400\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Persistence\DataContexts\ObrasFaiDataContext.cs" />
+    <Compile Include="Persistence\IUnitOfWork.cs" />
+    <Compile Include="Persistence\Mappings\Administration\PersonMap.cs" />
+    <Compile Include="Persistence\Mappings\Administration\UserMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\BiddingMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\BondMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\CommentsMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\ConstructionMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\ContractMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\ContractRateMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\DocumentMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\MeasurementMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\BiddingRateMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\SupervisorConstructionMap.cs" />
+    <Compile Include="Persistence\Mappings\Execution\SupervisorMap.cs" />
+    <Compile Include="Persistence\Mappings\General\CampMap.cs" />
+    <Compile Include="Persistence\Mappings\Support\DocumentTypeConstructionMap.cs" />
+    <Compile Include="Persistence\Mappings\Support\NatureOfObservationMap.cs" />
+    <Compile Include="Persistence\Mappings\Support\SituationMap.cs" />
+    <Compile Include="Persistence\Mappings\Support\TypeOfInspectionMap.cs" />
+    <Compile Include="Persistence\Mappings\Support\TypeOfBondMap.cs" />
+    <Compile Include="Persistence\Mappings\Support\TypeOfContractMap.cs" />
+    <Compile Include="Persistence\Mappings\Support\TypeOfConstructionMap.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Administration\PersonRepository.cs" />
+    <Compile Include="Repositories\Administration\UserRepository.cs" />
+    <Compile Include="Repositories\Execution\BiddingRepository.cs" />
+    <Compile Include="Repositories\Execution\BondRepository.cs" />
+    <Compile Include="Repositories\Execution\CommentRepository.cs" />
+    <Compile Include="Repositories\Execution\ConstructionRepository.cs" />
+    <Compile Include="Repositories\Execution\ContractRateRepository.cs" />
+    <Compile Include="Repositories\Execution\ContractRepository.cs" />
+    <Compile Include="Repositories\Execution\DocumentRepository.cs" />
+    <Compile Include="Repositories\Execution\BiddingRateRepository.cs" />
+    <Compile Include="Repositories\Execution\MeasurementRepository.cs" />
+    <Compile Include="Repositories\Execution\SupervisorConstructionRepository.cs" />
+    <Compile Include="Repositories\Execution\SupervisorRepository.cs" />
+    <Compile Include="Repositories\Support\CampusRepository.cs" />
+    <Compile Include="Repositories\Support\DocumentTypeConstructionRepository.cs" />
+    <Compile Include="Repositories\Support\NatureOfObservationRepository.cs" />
+    <Compile Include="Repositories\Support\SituationRepository.cs" />
+    <Compile Include="Repositories\Support\TypeOfInspectionRepository.cs" />
+    <Compile Include="Repositories\Support\TypeOfBondRepository.cs" />
+    <Compile Include="Repositories\Support\TypeOfConstructionRepository.cs" />
+    <Compile Include="Repositories\Support\TypeOfContractRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObrasFai.Domain\ObrasFai.Domain.csproj">
+      <Project>{f7ff2bae-1a0c-47bd-a5dd-f54ee1122292}</Project>
+      <Name>ObrasFai.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObrasFai.Shared\ObrasFai.Shared.csproj">
+      <Project>{2a7f039f-6345-4bb6-b0a3-8fe49bef246c}</Project>
+      <Name>ObrasFai.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

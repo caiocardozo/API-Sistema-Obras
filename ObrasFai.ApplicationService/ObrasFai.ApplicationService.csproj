@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A556551-0FAD-4515-90CC-028F197E85C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObrasFai.ApplicationService</RootNamespace>
+    <AssemblyName>ObrasFai.ApplicationService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\PersonApplicationService.cs" />
+    <Compile Include="Administration\UserApplicationService.cs" />
+    <Compile Include="ApplicationService.cs" />
+    <Compile Include="Execution\BiddingApplicationService.cs" />
+    <Compile Include="Execution\BondApplicationService.cs" />
+    <Compile Include="Execution\CommentApplicationService.cs" />
+    <Compile Include="Execution\ConstructionApplicationService.cs" />
+    <Compile Include="Execution\ContractApplicationService.cs" />
+    <Compile Include="Execution\ContractRateApplicationService.cs" />
+    <Compile Include="Execution\DocumentApplicationService.cs" />
+    <Compile Include="Execution\MeasurementApplicationService.cs" />
+    <Compile Include="Execution\BiddingRateApplicationService.cs" />
+    <Compile Include="Execution\SupervisorApplicationService.cs" />
+    <Compile Include="Execution\SupervisorConstructionApplicationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\CampusApplicationService.cs" />
+    <Compile Include="Support\DocumentTypeConstructionApplicationService.cs" />
+    <Compile Include="Support\NatureOfObservationApplicationService.cs" />
+    <Compile Include="Support\SituationApplicationService.cs" />
+    <Compile Include="Support\TypeOfInspectionApplicationService.cs" />
+    <Compile Include="Support\TypeOfBondApplicationService.cs" />
+    <Compile Include="Support\TypeOfConstructionApplicationService.cs" />
+    <Compile Include="Support\TypeOfContractApplicationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObrasFai.Domain\ObrasFai.Domain.csproj">
+      <Project>{f7ff2bae-1a0c-47bd-a5dd-f54ee1122292}</Project>
+      <Name>ObrasFai.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObrasFai.Infra\ObrasFai.Infra.csproj">
+      <Project>{BC82030A-E6AB-4DD0-B3FF-0B92663CF92D}</Project>
+      <Name>ObrasFai.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObrasFai.Shared\ObrasFai.Shared.csproj">
+      <Project>{2a7f039f-6345-4bb6-b0a3-8fe49bef246c}</Project>
+      <Name>ObrasFai.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObrasFai.Tests\ObrasFai.Tests.Domain.csproj">
+      <Project>{8eb840c2-53de-4eac-8f9e-299a9b4e12b1}</Project>
+      <Name>ObrasFai.Tests.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

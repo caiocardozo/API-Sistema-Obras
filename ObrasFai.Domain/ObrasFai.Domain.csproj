@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7FF2BAE-1A0C-47BD-A5DD-F54EE1122292}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObrasFai.Domain</RootNamespace>
+    <AssemblyName>ObrasFai.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Administration\Person\CreatePersonCommand.cs" />
+    <Compile Include="Commands\Administration\Person\DeletePersonCommand.cs" />
+    <Compile Include="Commands\Administration\Person\EditPersonCommand.cs" />
+    <Compile Include="Commands\Administration\User\AuthenticateUserCommand.cs" />
+    <Compile Include="Commands\Execution\Bidding\CreateBiddingCommand.cs" />
+    <Compile Include="Commands\Execution\Bidding\DeleteBiddingCommand.cs" />
+    <Compile Include="Commands\Execution\Bidding\EditBiddingCommand.cs" />
+    <Compile Include="Commands\Execution\Bond\DeleteBondCommand.cs" />
+    <Compile Include="Commands\Execution\Bond\CreateBondCommand.cs" />
+    <Compile Include="Commands\Execution\Bond\EditBondCommand.cs" />
+    <Compile Include="Commands\Execution\Bond\UpdateStatusBondCommand.cs" />
+    <Compile Include="Commands\Execution\Comments\DeleteCommentCommand.cs" />
+    <Compile Include="Commands\Execution\Comments\CreateCommentCommand.cs" />
+    <Compile Include="Commands\Execution\Comments\EditCommentCommand.cs" />
+    <Compile Include="Commands\Execution\Construction\CreateConstructionCommand.cs" />
+    <Compile Include="Commands\Execution\Construction\DeleteConstructionCommand.cs" />
+    <Compile Include="Commands\Execution\Construction\EditConstructionCommand.cs" />
+    <Compile Include="Commands\Execution\ContractRate\CreateContractRateCommand.cs" />
+    <Compile Include="Commands\Execution\ContractRate\DeleteContractRateCommand.cs" />
+    <Compile Include="Commands\Execution\ContractRate\EditContractRateCommand.cs" />
+    <Compile Include="Commands\Execution\Contract\CreateContractCommand.cs" />
+    <Compile Include="Commands\Execution\Contract\DeleteContractCommand.cs" />
+    <Compile Include="Commands\Execution\Contract\EditContractCommand.cs" />
+    <Compile Include="Commands\Execution\Documents\DeleteDocumentCommand.cs" />
+    <Compile Include="Commands\Execution\Documents\CreateDocumentCommand.cs" />
+    <Compile Include="Commands\Execution\Documents\EditDocumentCommand.cs" />
+    <Compile Include="Commands\Execution\BiddingRate\CreateBiddingRateCommand.cs" />
+    <Compile Include="Commands\Execution\BiddingRate\DeleteBiddingtRateCommand.cs" />
+    <Compile Include="Commands\Execution\BiddingRate\EditBiddingRateCommand.cs" />
+    <Compile Include="Commands\Execution\Measurement\DeleteMeasurementCommand.cs" />
+    <Compile Include="Commands\Execution\Measurement\CreateMeasurementCommand.cs" />
+    <Compile Include="Commands\Execution\Measurement\EditMeasurementCommand.cs" />
+    <Compile Include="Commands\Execution\SupervisorConstruction\DeleteSupervisorConstructionCommand.cs" />
+    <Compile Include="Commands\Execution\SupervisorConstruction\CreateSupervisorConstructionCommand.cs" />
+    <Compile Include="Commands\Execution\SupervisorConstruction\EditSupervisorConstructionCommand.cs" />
+    <Compile Include="Commands\Execution\SupervisorConstruction\UpdateStatusSupervisorConstructionCommand.cs" />
+    <Compile Include="Commands\Execution\Supervisor\DeleteSupervisorCommand.cs" />
+    <Compile Include="Commands\Execution\Supervisor\CreateSupervisorCommand.cs" />
+    <Compile Include="Commands\Execution\Supervisor\EditSupervisorCommand.cs" />
+    <Compile Include="Commands\Execution\Supervisor\UpdateStatusSupervisorCommand.cs" />
+    <Compile Include="Commands\Support\Campus\CreateCampusCommand.cs" />
+    <Compile Include="Commands\Support\Campus\DeleteCampusCommand.cs" />
+    <Compile Include="Commands\Support\Campus\EditCampusCommand.cs" />
+    <Compile Include="Commands\Support\Campus\UpdateStatusCampusCommand.cs" />
+    <Compile Include="Commands\Support\DocumentType\DeleteDocumentTypeCommand.cs" />
+    <Compile Include="Commands\Support\DocumentType\CreateDocumentTypeConstructionCommand.cs" />
+    <Compile Include="Commands\Support\DocumentType\EditDocumentTypeConstructionCommand.cs" />
+    <Compile Include="Commands\Support\DocumentType\UpdateStatusDocumentTypeConstructionCommand.cs" />
+    <Compile Include="Commands\Support\NatureOfObservation\DeleteNatureOfObservationCommand.cs" />
+    <Compile Include="Commands\Support\NatureOfObservation\CreateNatureOfObservationCommand.cs" />
+    <Compile Include="Commands\Support\NatureOfObservation\EditNatureOfObservationCommand.cs" />
+    <Compile Include="Commands\Support\NatureOfObservation\UpdateIAvaliableNatureOfObservationCommand.cs" />
+    <Compile Include="Commands\Support\NatureOfObservation\UpdateStatusNatureOfObservationCommand.cs" />
+    <Compile Include="Commands\Support\Situation\DeleteSituationCommand.cs" />
+    <Compile Include="Commands\Support\Situation\CreateSituationCommand.cs" />
+    <Compile Include="Commands\Support\Situation\EditSituationCommand.cs" />
+    <Compile Include="Commands\Support\Situation\UpdateStatusSituationCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfContract\UpdateISapiensTOContractCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfInspection\DeleteTypeOfInspectionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfInspection\CreateTypeOfInspectionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfInspection\EditTypeOfInspectionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfInspection\UpdateStatusTOInspectionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfBond\DeleteTypeOfBondCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfBond\CreateTypeOfBondCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfBond\EditTypeOfBondCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfBond\UpdateStatusTOBondCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfConstruction\DeleteTypeOfConstructionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfConstruction\CreateTypeOfConstructionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfConstruction\EditTypeOfConstructionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfConstruction\UpdateStatusTOConstructionCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfContract\DeleteTypeOfContractCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfContract\CreateTypeOfContractCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfContract\EditTypeOfContractCommand.cs" />
+    <Compile Include="Commands\Support\TypeOfContract\UpdateStatusTOContractCommand.cs" />
+    <Compile Include="Entities\Administration\Person.cs" />
+    <Compile Include="Entities\Administration\User.cs" />
+    <Compile Include="Entities\Execution\Bidding.cs" />
+    <Compile Include="Entities\Execution\Bond.cs" />
+    <Compile Include="Entities\Execution\Comment.cs" />
+    <Compile Include="Entities\Execution\Construction.cs" />
+    <Compile Include="Entities\Execution\Contract.cs" />
+    <Compile Include="Entities\Execution\ContractRate.cs" />
+    <Compile Include="Entities\Execution\Document.cs" />
+    <Compile Include="Entities\Execution\Measurement.cs" />
+    <Compile Include="Entities\Execution\BiddingRate.cs" />
+    <Compile Include="Entities\Execution\Supervisor.cs" />
+    <Compile Include="Entities\Execution\SupervisorConstruction.cs" />
+    <Compile Include="Entities\Support\Campus.cs" />
+    <Compile Include="Entities\Support\DocumentTypeConstruction.cs" />
+    <Compile Include="Entities\Support\NatureOfObservation.cs" />
+    <Compile Include="Entities\Support\Situation.cs" />
+    <Compile Include="Entities\Support\TypeOfInspection.cs" />
+    <Compile Include="Entities\Support\TypeOfBond.cs" />
+    <Compile Include="Entities\Support\TypeOfConstruction.cs" />
+    <Compile Include="Entities\Support\TypeOfContract.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Administration\IPersonRepository.cs" />
+    <Compile Include="Repositories\Administration\IUserRepository.cs" />
+    <Compile Include="Repositories\Execution\IBiddingRepository.cs" />
+    <Compile Include="Repositories\Execution\IBondRepository.cs" />
+    <Compile Include="Repositories\Execution\ICommentRepository.cs" />
+    <Compile Include="Repositories\Execution\IConstructionRepository.cs" />
+    <Compile Include="Repositories\Execution\IContractRateRepository.cs" />
+    <Compile Include="Repositories\Execution\IContractRepository.cs" />
+    <Compile Include="Repositories\Execution\IDocumentRepository.cs" />
+    <Compile Include="Repositories\Execution\IBiddingRateRepository.cs" />
+    <Compile Include="Repositories\Execution\IMeasurementRepository.cs" />
+    <Compile Include="Repositories\Execution\ISupervisorConstructionRepository.cs" />
+    <Compile Include="Repositories\Execution\ISupervisorRepository.cs" />
+    <Compile Include="Repositories\Support\ICampusRepository.cs" />
+    <Compile Include="Repositories\Support\IDocumentTypeConstructionRepository.cs" />
+    <Compile Include="Repositories\Support\INatureOfObservationRepository.cs" />
+    <Compile Include="Repositories\Support\ISituationRepository.cs" />
+    <Compile Include="Repositories\Support\ITypeOfInspectionRepository.cs" />
+    <Compile Include="Repositories\Support\ITypeOfBondRepository.cs" />
+    <Compile Include="Repositories\Support\ITypeOfConstructionRepository.cs" />
+    <Compile Include="Repositories\Support\ITypeOfContractRepository.cs" />
+    <Compile Include="Scopes\Administration\PersonScopes.cs" />
+    <Compile Include="Scopes\Administration\UserScopes.cs" />
+    <Compile Include="Scopes\Execution\BiddingScopes.cs" />
+    <Compile Include="Scopes\Execution\BondScopes.cs" />
+    <Compile Include="Scopes\Execution\CommentScopes.cs" />
+    <Compile Include="Scopes\Execution\ConstructionScopes.cs" />
+    <Compile Include="Scopes\Execution\ContractRateScopes.cs" />
+    <Compile Include="Scopes\Execution\ContractScopes.cs" />
+    <Compile Include="Scopes\Execution\DocumentScopes.cs" />
+    <Compile Include="Scopes\Execution\BiddingRateScopes.cs" />
+    <Compile Include="Scopes\Execution\MeasurementScopes.cs" />
+    <Compile Include="Scopes\Execution\SupervisorConstructionScopes.cs" />
+    <Compile Include="Scopes\Execution\SupervisorScopes.cs" />
+    <Compile Include="Scopes\Support\CampusScopes.cs" />
+    <Compile Include="Scopes\Support\DocumentTypeConstructionScopes.cs" />
+    <Compile Include="Scopes\Support\NatureOfObservationScopes.cs" />
+    <Compile Include="Scopes\Support\SituationScopes.cs" />
+    <Compile Include="Scopes\Support\TypeInspectionScopes.cs" />
+    <Compile Include="Scopes\Support\TypeOfBondScopes.cs" />
+    <Compile Include="Scopes\Support\TypeOfConstructionScopes.cs" />
+    <Compile Include="Scopes\Support\TypeOfContractScopes.cs" />
+    <Compile Include="Services\Administration\IPersonApplicationService.cs" />
+    <Compile Include="Services\Administration\IUserApplicationService.cs" />
+    <Compile Include="Services\Execution\IBiddingApplicationService.cs" />
+    <Compile Include="Services\Execution\IBondApplicationService.cs" />
+    <Compile Include="Services\Execution\ICommentApplicationService.cs" />
+    <Compile Include="Services\Execution\IConstructionApplicationService.cs" />
+    <Compile Include="Services\Execution\IContractApplicationService.cs" />
+    <Compile Include="Services\Execution\IContractRateApplicationService.cs" />
+    <Compile Include="Services\Execution\IDocumentApplicationService.cs" />
+    <Compile Include="Services\Execution\IMeasurementApplicationService.cs" />
+    <Compile Include="Services\Execution\IBiddingRateApplicationService.cs" />
+    <Compile Include="Services\Execution\ISupervisorApplicationService.cs" />
+    <Compile Include="Services\Execution\ISupervisorConstructionApplicationService.cs" />
+    <Compile Include="Services\Support\ICampusApplicationService.cs" />
+    <Compile Include="Services\Support\IDocumentTypeConstructionApplicationService.cs" />
+    <Compile Include="Services\Support\INatureOfObservationApplicationService.cs" />
+    <Compile Include="Services\Support\ISituationApplicationService.cs" />
+    <Compile Include="Services\Support\ITypeOfInspectionApplicationService.cs" />
+    <Compile Include="Services\Support\ITypeOfBondApplicationService.cs" />
+    <Compile Include="Services\Support\ITypeOfContractApplicationService.cs" />
+    <Compile Include="Services\Support\ITypeOfConstructionApplicationService.cs" />
+    <Compile Include="Specs\Administration\PersonSpecs.cs" />
+    <Compile Include="Specs\Administration\UserSpecs.cs" />
+    <Compile Include="ValueObjects\Cpf.cs" />
+    <Compile Include="ValueObjects\Email.cs" />
+    <Compile Include="ValueObjects\Name.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObrasFai.Shared\ObrasFai.Shared.csproj">
+      <Project>{2A7F039F-6345-4BB6-B0A3-8FE49BEF246C}</Project>
+      <Name>ObrasFai.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Specs\Execution\Bidding\" />
+    <Folder Include="Specs\Execution\Bond\" />
+    <Folder Include="Specs\Execution\Comments\" />
+    <Folder Include="Specs\Execution\Construction\" />
+    <Folder Include="Specs\Execution\Contract\" />
+    <Folder Include="Specs\Execution\Documents\" />
+    <Folder Include="Specs\Execution\Measurement\" />
+    <Folder Include="Specs\Execution\SupervisorConstruction\" />
+    <Folder Include="Specs\Execution\Supervisor\" />
+    <Folder Include="Specs\Support\DocumentType\" />
+    <Folder Include="Specs\Support\NatureOfObservation\" />
+    <Folder Include="Specs\Support\Situation\" />
+    <Folder Include="Specs\Support\TypeInspection\" />
+    <Folder Include="Specs\Support\TypeOfBond\" />
+    <Folder Include="Specs\Support\TypeOfConstruction\" />
+    <Folder Include="Specs\Support\TypeOfContract\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
